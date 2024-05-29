@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/utility.css">
+    <title>Full Width HTML Page</title>
+</head>
+<body>
+
+    <div class="full-width-container bg-black">
+        <div class="left">
+            <div class="home rounded bg_grey m-2 p-1">
+                <ul>
+                    <li><img class="invert_img" src="../assets/home_logo.svg" alt="home"><label  for="Home">Home</label></li>
+                    <li><img class="invert_img" src="../assets/search_logo.svg" alt="home"><label class=" search" for="Home">Search</label></li>
+                </ul>
+            </div>
+            <div class="library rounded bg_grey m-2 p-1">
+                <ul>
+                    <li><img class="invert_img" src="../assets/library_logo.svg" alt="home"><label  for="Home">Your Library</label></li>
+                </ul>
+                <div class="playlist ">
+                    <ul class = "Play_ul"> 
+                      </ul>
+                </div>
+
+                <!-- <div class="footer bg_grey p-2">
+                    <a href="">Legal</a>
+                    <a href="">Privacy Center</a>
+                    <a href="">privacy Policy</a>
+                    <a href="">Cookies</a>
+                    <a href="">About Us</a>
+
+                </div> -->
+            </div>
+        </div>
+        <div class="right">
+            <div class="main_header  m-2 p-lr">
+                <div class="arrow gap-1 invert_img flex">
+                    <div class="rounded_circle j-center">
+                        <img class="img_arrow p-2" src="../assets/left_mini_arrow.svg" alt="" srcset="">
+                    </div>
+                    <div class="rounded_circle j-center">
+                        <img class="img_arrow p-2" src="../assets/right_mini_arrow.svg" alt="" srcset="">
+                    </div>
+                </div>
+                <div class="arrow gap-1 invert_img flex item-center">
+                    <label class=" invert_img" for="Home">Navdip Chothani</label>
+                    <div class="rounded_circle j-center ">
+                        <img class="img_arrow p-2" src="../assets/user_account.svg" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="playlist-main-conta rounded bg_grey pt-1 m-2 p-1">
+                <label class=" p-1" for="PlayList">Your Playlist</label>
+                <div class="card-cont mt-3 ">
+                    
+                    <div class="card carding">
+                        <div class = "playbutton imgunselect  circle j-center ">
+                            <img class="imgunselect" src="../assets/play_logo.svg" alt="" srcset="">
+                        </div>
+                        <img   src="../assets/images.jpeg" alt="">
+                        <div class="nameAnddis imgunselect mt-2">
+                            <div class="overflow-1">
+                                <label class=" fontsize1" for="name_music">HitsTrending Valentine's HitsHitsTrending Valentine's Hits</label>
+                            </div>
+                            <div class="overflow-2  des-music fontsize2 mt-2 font_color_light">
+                                India's Ultimate Love Playlist. Cover- Ranbir Kapoor & Rashmika Mandanna
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card carding">
+                        <img src="../assets/images.jpeg" alt="">
+                        <div class="nameAnddis mt-2">
+                            <div class="overflow-1">
+                                <label class=" fontsize1" for="name_music">HitsTrending Valentine's HitsHitsTrending Valentine's Hits</label>
+                            </div>
+                            <div class="overflow-2 des-music fontsize2 mt-2 font_color_light">
+                                India's Ultimate Love Playlist. Cover- Ranbir Kapoor & Rashmika Mandanna
+                            </div>
+                        </div>
+                    </div>  
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="playbar bg-black flex">
+        <div class="mc_details ">
+
+        </div>
+        <div class="pb_details">
+            <div class="group_play flex">
+                <div id="pre_btn">
+                    <img class="invert_img" src="../assets/play-logo/premuc_logo.svg" alt="" srcset="">
+                </div>
+                <div id="action_btn">
+                    <div class="round-white   j-center">
+                        <img id="btn_check" src="../assets/play-logo/play_btn.svg" alt="" srcset="">
+                    </div>
+                </div>
+                <div id="nex_btn">
+                    <img class="invert_img" src="../assets/play-logo/nexmuc_logo.svg" alt="" srcset="">
+                </div>
+            </div>
+            <div class="seek_detail flex j-center">
+                <div id="strtTm">
+                    00:00
+                </div>
+                <!-- <div id="seekMuc"> -->
+                <input type="range" name="" id="seekbar_MU"min="0" max="50" step="any" />
+                <!-- </div> -->
+                <div id="endTm">
+                    00:00
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <script src="../script/script.js"></script>
+
+</body>
+</html>

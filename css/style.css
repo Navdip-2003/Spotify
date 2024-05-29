@@ -1,0 +1,273 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.full-width-container {
+    /* width: 100vw; */
+    height: 89vh; 
+    display: flex;
+    
+}
+.left{
+    width: 25vw;
+    height: fit-content;
+    /* height: auto; */
+    /* height: 80vh; */
+
+}
+.right{
+    /* height: 100vh; */
+    width: 75vw;
+    height: 100vh;
+}
+
+.home ul li{
+    list-style: none;
+    /* width: 15px; */
+    display: flex;
+    gap: 15px;
+    padding: 5px;
+    font-weight: 500;
+    height: 3vh;
+    
+}
+
+.library ul li{
+    list-style: none;
+    /* width: 15px; */
+    display: flex;
+    gap: 15px;
+    padding: 5px;
+    
+}
+.library{
+    position: relative;
+    height: 70vh;
+}
+
+.footer a {
+    font-size: 12px;
+    color: rgb(87, 87, 87);
+    gap: 10px;
+    margin: 2px;
+}
+.footer{
+    position: absolute;
+    background-color: gray;
+    bottom: 0;
+    /* padding: 10px; */
+}
+
+/* .playlist{
+    height: 90%;
+    width: 329px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: center; 
+    overflow-y: scroll;   
+}
+
+
+.Play_ul{
+    text-align: center;
+    padding-right : 10px;
+} */
+
+.playlist {
+    height: 90%;
+    width: 329px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: center; 
+    overflow-y: scroll;   
+    padding: 10px; 
+    border-radius: 10px; 
+}
+
+.song_ui {
+    height: 30px;
+    margin-top: 5px;
+    border-radius: 10px;
+    text-align: center; 
+}
+
+.Play_ul {
+    text-align: center;
+    padding-right: 10px;
+    padding-left: 0; 
+}
+
+.Play_ul li {
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: #171717;
+    border-radius: 10px;
+    user-select: none;;
+    text-align: center; /* Center text horizontally */
+}
+
+.Play_ul li:hover {
+    background-color: #242424;
+}
+
+
+
+
+
+.search{
+    color: white
+}
+.search:hover{
+    color: rgb(157, 157, 157);;;
+}
+.rounded_circle{
+    height: 23px;
+    width: 23px;
+    background-color: rgba(0, 0, 0, 0.253);
+    border-radius: 50%;
+    display: flex;
+}
+
+.main_header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.playlist-main-conta{
+    padding-top: 15px;
+    height: 77vh;
+    overflow-y: scroll;
+}
+.playlist-main-conta label{
+    font-size:17px;
+    font-weight: bolder;
+
+}
+
+.card-cont{
+    flex-wrap: wrap;
+    display: flex;
+    /* height: 40px; */
+}
+
+.card{
+    width: 120px;
+    height: auto;
+    position: relative;
+    padding: 12px;
+    margin: 5px;
+    background-color: #171717;
+    border-radius: 10px;
+}
+.card img{
+    width: 100%;
+    object-fit: contain;
+}
+.card:hover{
+    background-color: #242424;
+}
+
+.card:hover .playbutton{
+    opacity: 1;
+    animation: moveUp 0.2s ease forwards;
+}
+@keyframes moveUp {
+    0% {
+        transform: translate(-20%, 0);
+    }
+    100% {
+        transform: translate(-20%, -30%);
+    }
+}
+
+.circle{
+    border-radius: 50%;
+ 
+ 
+    background-color: #1ed760;
+}
+
+.playbutton{
+    height: 20px;
+    width: 20px;
+    padding: 5px;
+    position: absolute;
+    bottom: 82px;
+    right: 20px;
+    opacity: 0;
+    /* display: none; */
+}
+
+
+.playbar{
+    height: 70px;
+    width: 100vw;
+    /* background-color: green; */
+}
+.mc_details{
+    width: 25vw;
+    height: 70px;
+    /* background-color: green; */
+}
+.pb_details{
+    width: 75vw;
+    height: 70px;
+    padding-top: 2px;
+    /* background-color: rebeccapurple; */
+}
+.group_play{
+    height: 30px;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+.round-white {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 3px;
+    border-radius: 50%;
+    background-color: white;
+    width: 30px; 
+    height: 30px;
+}
+.round-white img{
+    max-width: 100%; 
+    max-height: 100%;
+}
+
+.seek_detail{
+    padding-top: 3px;
+    /* background-color: green; */
+    height: 30px;
+    gap: 10px;
+    width: 75vw;
+    align-items: center;
+    justify-content: center;
+}
+#seekMuc{
+    height: 4px;
+    width: 50vw;
+    background-color: white;
+    border-radius: 20px;
+    border: 2px solid rgb(127, 127, 127);
+}
+#seekbar_MU{
+    width: 50vw;
+}
+
+
+
+
+/* #242424 */
+/* https://i.scdn.co/image/ab67706f00000002118ecaf6c5151716f13fd0b1 */
+
