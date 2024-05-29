@@ -1,11 +1,16 @@
-let api = "http://127.0.0.1:5501/Songs"
+let IP = "http://127.0.0.1:5500"
+let api = `${IP}/Songs`
+
+let currentData = {};
 const audio_player = document.createElement("audio");
 let seek = document.getElementById("seekbar_MU");
 seek.setAttribute("value", "0");
 seek.max = 50;
 let testDiv = document.getElementById("action_btn");
 let preDiv = document.getElementById("pre_btn");
+let cuurentMusicWidget =  document.querySelector('.cuurentMusic');
 let nextDiv = document.getElementById("nex_btn");
+let cuurent_music_name = document.getElementById('music-text');
 let indexSongOn = null;
 
 async function getSong(){
@@ -33,7 +38,7 @@ async function main(){
       const listItem = document.createElement('li');
 
       // Set the text content of the list item to the song name
-      let name =song.split("/Songs/")[1].replaceAll(".mp3" , "").replaceAll("%20" , " ");
+      let name = cleansongname(song)
       listItem.textContent = name;
 
       // Add a click event listener to each list item
@@ -41,31 +46,45 @@ async function main(){
         if (audio_player.src === song && !audio_player.paused) {
           pauseAudio();
         } else {
+          currentData.name = cleansongname(song)
           playAudio(song);
-          
           indexSongOn = index;
+          
           
         }
       });
-
       songList.appendChild(listItem);
     });
 }
 main()
 
-function playAudio(audioSource) {
+function cleansongname (song) {
+  let clensong = song.split("/Songs/")[1].replaceAll(".mp3" , "").replaceAll("%20" , " ");
+  return clensong;
+}
+
+function setCurrentNameWidget() {  
+  cuurent_music_name.innerHTML = currentData.name
+  cuurentMusicWidget.style.display = "flex";
+  
+}
+
+function playAudio(audioSource ) {
+
   if (audio_player.src !== audioSource) {
       audio_player.src = audioSource;
       seek.value = "0";
-
+      setCurrentNameWidget()
       // Set seek.max when a new audio source is loaded
       audio_player.addEventListener('loadedmetadata', () => {
           seek.max = audio_player.duration;
-          console.log("Seek max val is : " ,seek.max);
+          // console.log("Seek max val is : " ,seek.max);
           document.getElementById("endTm").innerHTML = formatTime(audio_player.duration);
       });
   }
+  
   audio_player.play();
+  
 }
 
   function pauseAudio() {
@@ -75,12 +94,12 @@ function playAudio(audioSource) {
 
   testDiv.addEventListener("click", () => {
     if(audio_player.src !== ""){
-      if (document.getElementById("btn_check").src != "http://127.0.0.1:5501/assets/play-logo/pause_btn.svg") {
-        document.getElementById("btn_check").src = "http://127.0.0.1:5501/assets/play-logo/pause_btn.svg";
+      if (document.getElementById("btn_check").src != `${IP}/assets/play-logo/pause_btn.svg`) {
+        document.getElementById("btn_check").src = `${IP}/assets/play-logo/pause_btn.svg`;
         audio_player.pause();
         console.log("Audio player stopped")
       } else {
-        document.getElementById("btn_check").src = "http://127.0.0.1:5501/assets/play-logo/play_btn.svg";
+        document.getElementById("btn_check").src = `${IP}/assets/play-logo/play_btn.svg`;
         audio_player.play();
         console.log("Audio player playing");  
 

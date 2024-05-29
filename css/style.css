@@ -84,7 +84,7 @@ body {
 
 .playlist {
     height: 90%;
-    width: 329px;
+    width: 23vw;
     text-overflow: ellipsis;
     overflow: hidden;
     text-align: center; 
@@ -92,6 +92,8 @@ body {
     padding: 10px; 
     border-radius: 10px; 
 }
+
+
 
 .song_ui {
     height: 30px;
@@ -219,7 +221,7 @@ body {
     /* background-color: green; */
 }
 .pb_details{
-    width: 75vw;
+    width: 55vw;
     height: 70px;
     padding-top: 2px;
     /* background-color: rebeccapurple; */
@@ -250,7 +252,7 @@ body {
     /* background-color: green; */
     height: 30px;
     gap: 10px;
-    width: 75vw;
+    width: 55vw;
     align-items: center;
     justify-content: center;
 }
@@ -262,7 +264,13 @@ body {
     border: 2px solid rgb(127, 127, 127);
 }
 #seekbar_MU{
-    width: 50vw;
+    width: 40vw;
+    height: 7px;
+}
+
+.sizePlayPause{
+    height: 15px;
+    width: 15px;
 }
 
 
@@ -270,4 +278,31 @@ body {
 
 /* #242424 */
 /* https://i.scdn.co/image/ab67706f00000002118ecaf6c5151716f13fd0b1 */
+
+
+.cuurentMusic{
+    width: 25vw;
+    height: 10vh;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: none;
+
+}
+.musicImage{
+    height: auto;
+    width: 4vw;
+    background-size: contain;
+    
+}
+.musicImage img{
+    width: 100%;
+    object-fit: contain;
+    
+}
+.muc-detail{
+    width:21vw;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 
